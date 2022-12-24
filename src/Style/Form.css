@@ -1,0 +1,157 @@
+/*----Reset---*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/*-----Common-----*/
+body{
+    background-image: url(https://img.freepik.com/free-photo/business-women-signature-document_1388-90.jpg?w=996&t=st=1671685478~exp=1671686078~hmac=cbd8185f084711dfba5d664ca29988cb76727427988c27898f0a94c920f6dd3a);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    
+}
+
+button{
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease-in;
+}
+
+button:hover{
+    background-color: rgb(247, 247, 249) i !important;
+    color: black !important ;
+}
+
+input, textarea, table{
+    font-size: 1rem;
+}
+
+::placeholder{
+    font-size: 0.9rem;
+}
+
+/*-----header-----*/
+#header{
+    background-color: rgb(138, 126, 75);
+    width: 100%;
+    display: flex;
+    margin: 0, auto;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header.h2{
+
+}
+
+.search > input{
+    border-radius: 3px;
+    font-size: 1rem;
+    width: 250px;
+    height: 30px;
+    padding: 16px 10px;
+}
+
+.search > label{
+    font-size: 18px;
+    font-weight: 550px;
+}
+
+.main{
+    display: flex;
+    /* align-items: center; */
+    background-color: transparent;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form{
+    background-color: transparent;
+    border: 3px solid hsl(39, 77%, 83%);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 2rem;
+    
+}
+.h2{
+    align-items: center;
+    display: grid;
+    justify-content: center;
+}
+
+#title{
+    border-radius: 3px;
+    font-size: 1rem;
+    margin: 10px;
+    width: 98%;
+    height: 30px;
+    padding: 16px 10px;
+}
+
+#nBody{
+    border-radius: 3px;
+    font-size: 1rem;
+    margin: 10px;
+    width: 100%;
+    height: 30px;
+    padding: 5px 10px;
+}
+
+#save{
+    margin: 10px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    background-color: rgb(148, 144, 247);
+}
+
+#reset{
+    margin: 10px;
+    padding: 3px 6px;
+    border-radius: 5px;
+    background-color: rgb(252, 79, 5);
+}
+
+
+.main .tbl table{
+    border: 3px solid hsl(39, 77%, 83%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+    padding: 20px;
+    width: 20rem;
+    height: auto;
+    overflow: auto;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.main .tbl table th{
+    border: 3px solid hsl(39, 77%, 83%);
+    padding: 3px;
+    background-color: rgb(196, 196, 196);
+    
+}
+
+.main .tbl table td{
+    border: 3px solid hsl(39, 77%, 83%);
+    padding: 3px;
+    background-color: rgb(219, 219, 219);
+    
+    
+}
+
+.main .tbl table th:last-child,
+.main .tbl table td:nth-last-child(2){
+    text-align: center;
+}
+.main .tbl table view,
+.main .tbl table delete{
+    text-align: center;
+
+}
