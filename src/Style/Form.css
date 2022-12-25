@@ -17,15 +17,21 @@ body{
     
 }
 
-button{
+.view > button,
+.delete > button{
     cursor: pointer;
     border: none;
+    padding: 5px 8px;
+    font-size: 0.8rem;
     transition: all 0.3s ease-in;
+    border-radius: 3px;
 }
 
-button:hover{
-    background-color: rgb(247, 247, 249) i !important;
+.view > button:hover,
+.delete > button:hover{
+    background-color: rgb(247, 247, 249) !important;
     color: black !important ;
+    font-weight: 600 !important;
 }
 
 input, textarea, table{
@@ -74,7 +80,7 @@ input, textarea, table{
 
 .form{
     background-color: transparent;
-    border: 3px solid hsl(39, 77%, 83%);
+    border: 3px solid hsl(67, 62%, 45%);
     border-radius: 5px;
     margin: 5px;
     padding: 2rem;
@@ -84,40 +90,62 @@ input, textarea, table{
     align-items: center;
     display: grid;
     justify-content: center;
+    font-size: 35px;
+    font-family: Georgia;
+    
 }
 
 #title{
-    border-radius: 3px;
+    border-radius: 4px;
     font-size: 1rem;
     margin: 10px;
-    width: 98%;
-    height: 30px;
+    width: 25rem;
+    height: 45px;
     padding: 16px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #nBody{
-    border-radius: 3px;
+    border-radius: 4px;
     font-size: 1rem;
     margin: 10px;
-    width: 100%;
-    height: 30px;
-    padding: 5px 10px;
+    width: 25rem;
+    height: 45px;
+    padding: 14px 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 #save{
     margin: 10px;
-    padding: 3px 6px;
+    padding: 5px 8px;
     border-radius: 5px;
     background-color: rgb(148, 144, 247);
+    font-size: 15px;
 }
 
 #reset{
     margin: 10px;
-    padding: 3px 6px;
+    padding: 5px 8px;
     border-radius: 5px;
     background-color: rgb(252, 79, 5);
+    font-size: 15px;
 }
 
+#save:hover{
+    background-color: rgb(247, 247, 249) !important;
+    color: #7700ff !important ;
+    font-weight: 600 !important;
+    border: 2px solid #8400ff;
+}
+
+#reset:hover{
+    background-color: rgb(247, 247, 249) !important;
+    color: rgb(255, 0, 0) !important ;
+    font-weight: 600 !important;
+    border: 2px solid red;
+}
 
 .main .tbl table{
     border: 3px solid hsl(39, 77%, 83%);
@@ -150,8 +178,25 @@ input, textarea, table{
 .main .tbl table td:nth-last-child(2){
     text-align: center;
 }
-.main .tbl table view,
-.main .tbl table delete{
+.main .tbl .view,
+.main .tbl .delete{
     text-align: center;
-
 }
+.main .tbl table td{
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.delete > button{
+    background-color: rgb(255, 0, 0);
+    color: rgb(245, 245, 245);
+}
+
+.view > button{
+    background-color: rgb(15, 181, 0);
+    color: white;
+}
+
+/*-------Responsive-------*/
+  
