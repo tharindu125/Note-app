@@ -5,6 +5,7 @@ import { Button } from 'react-bootstrap';
 
 export default class Form extends Component{
 
+
 constructor (props) {
     super(props)
 
@@ -15,9 +16,12 @@ constructor (props) {
 
     this.state = {
         nTitle : '',
-        nBody : ''
-    }
+        nBody : '',
+        noteCount: 0,
+        newNote: ''
+    }   
 }
+
 
 onChangeBody = (e) => {
     this.setState({nBody : e.target.value})
@@ -29,8 +33,10 @@ onChangeTitle = (e) => {
     console.log("2");
 }
 
+
 onSubmitSave = (e) => {
     e.preventDefault();
+
     console.log("3");
     if(this.state.nTitle === '' || this.state.nBody === ''){
         alert("Please fill all thins!!! ");
@@ -69,6 +75,13 @@ onSubmitSave = (e) => {
         tr.appendChild(td1);
         tr.appendChild(td2);
         tr.appendChild(td3);
+
+        // //increment note count
+        this.state.noteCount++;
+
+        //set new note
+        this.state.newNote = tr;
+
     }
 
 }
@@ -92,10 +105,6 @@ onResetBtn = (e) => {
 // /*-------Events-------*/ 
 
 // form.addEventListener('click',onceHandler);
-
-// function onceHandler(){
-//     alert('outer, once');
-// }
 
 
 // //For page load
@@ -169,6 +178,7 @@ onResetBtn = (e) => {
     
 // // }
 render() {
+    
 return (
     <div>
         <header id='header' >
@@ -190,7 +200,7 @@ return (
                 </form>
             </div>
             <div id='table' className='tbl'>
-                <table id='items'> 
+                <table id='items' value={this.state.Table}> 
 
                     <tr>
                         <th>Title</th>
