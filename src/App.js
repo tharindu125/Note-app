@@ -1,11 +1,13 @@
 import './App.css';
 import Form from './Components/Form';
+import New from './Components/New';
 
 
 function App() {
   return (
     <div >
-      <Form/>
+      {/* <Form/> */}
+      <New/>
     </div>
   );
 }
