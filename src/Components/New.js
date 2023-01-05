@@ -4,10 +4,10 @@ import '../Style/Form.css'
 export default function New() {
     const [click, save] = useState(false);
     const [click2, reset] = useState(false);
-    const [title, setTitle] = useState("");
-    const [body, setBody] = useState("");
-    const [tblDiv, setTable] = useState("");
-    const [tbl, setData] = useState("");
+    const [title, setTitle] = useState('');
+    const [body, setBody] = useState('');
+    const [tblDiv, setTable] = useState('');
+    const [tbl, setData] = useState('');
 
     var noteCount = 0;
     var newNote = '';
@@ -28,14 +28,15 @@ export default function New() {
     }
   
     useEffect(() => {
-       
+    
         console.log("#1");
-        // useEffect.preventDefault();
+        // e.preventDefault();
         
         if(title === '' && body === ''){
             alert("Please fill all fields!!!")
             console.log("2");
         }else{
+
             //create a new note  record
             console.log("3");
             //New tr
@@ -81,7 +82,7 @@ export default function New() {
             updateTable();
     
         }
-    }, []);
+    }, [click2]);
 
 
   return (
