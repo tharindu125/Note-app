@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import '../Style/Form.css'
 
 export default function New() {
-    const [click, save] = useState(false);
+    const [click, save] = useState(null);
     const [click2, reset] = useState(false);
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
@@ -82,7 +82,7 @@ export default function New() {
             updateTable();
     
         }
-    }, [click2]);
+    }, []);
 
 
   return (
@@ -99,14 +99,14 @@ export default function New() {
             <div>
                 <form action="" className='form' id='frm' >
                     <h2 className='h2'> Add a Note</h2>
-                    <input type ="text" id='title' placeholder='Title' onClick={(e) => setTitle(e.target.id)}/><br/>
-                    <textarea type="text" id="nBody" placeholder='Note Body' onClick={(e) => setBody(e.target.id)}/><br/>
+                    <input type ="text" id='title' placeholder='Title' onClick={(e) => setTitle(e.target.value)}/><br/>
+                    <textarea type="text" id="nBody" placeholder='Note Body' onClick={(e) => setBody(e.target.value)}/><br/>
                     <button type='submit' id='save' onClick={() => save(click) } >Save</button>
                     <button type='reset' id='reset' onClick={() => reset(click2)}>Reset</button>
                 </form>
             </div>
-            <div id='table' className='tbl' onClick={(e) => setTable(e.target.id)} >
-                <table id='items' onClick={(e) => setData(e.target.id)}> 
+            <div id='table' className='tbl' onClick={(e) => setTable(e.target.value)} >
+                <table id='items' onClick={(e) => setData(e.target.value)}> 
 
                     <tr>
                         <th>Title</th>
