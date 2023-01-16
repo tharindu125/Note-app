@@ -5,9 +5,12 @@ export default function New() {
     
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
-     
+   
+    
     let id = 0;
 
+
+    /*------Add Note----*/
     const myFn = (event) => {
         event.preventDefault()
         
@@ -49,13 +52,20 @@ export default function New() {
 
             document.getElementById('tbl_body').appendChild(tr)
             id += 1;
+
             
         }
     }
 
-    const myRe = (event) => {
-        event.preventDefault();
-        alert("Please !!")
+    const myRe = (e) => {
+        e.preventDefault();
+        console.log('123456')
+        
+        console.log(e.target.id);
+           
+        var tr = e.target
+        document.getElementById('tbl').removeChild(tr);
+            
     }
     // useEffect(() => {
     

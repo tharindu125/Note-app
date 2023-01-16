@@ -236,7 +236,7 @@ input, textarea, table{
     
     #title{
         border-radius: 2px;
-        font-size: 0.5rem;
+        font-size: 0.85rem;
         margin: 5px;
         width: 18rem;
         height: 28px;
@@ -247,7 +247,7 @@ input, textarea, table{
     
     #nBody{
         border-radius: 2px;
-        font-size: 0.5rem;
+        font-size: 0.85rem;
         margin: 5px;
         width: 18rem;
         height: 28px;
@@ -274,26 +274,26 @@ input, textarea, table{
 
     /*Table*/
     .main .tbl table{
-        border: 3px solid hsl(39, 77%, 83%);
+        border: 2px solid hsl(39, 77%, 83%);
         background-color: rgb(255, 255, 255);
-        border-radius: 3px;
-        padding: 20px;
+        border-radius: 2px;
+        padding: 10px;
         width: 20rem;
         height: auto;
         overflow: auto;
-        margin-left: 10px;
+        margin-left: 5px;
         margin-top: 5px;
     }
     
     .main .tbl table th{
-        border: 3px solid hsl(39, 77%, 83%);
+        border: 2px solid hsl(39, 77%, 83%);
         padding: 3px;
         background-color: rgb(196, 196, 196);
         
     }
     
     .main .tbl table td{
-        border: 3px solid hsl(39, 77%, 83%);
+        border: 2px solid hsl(39, 77%, 83%);
         padding: 3px;
         background-color: rgb(219, 219, 219);
         
@@ -309,7 +309,7 @@ input, textarea, table{
         text-align: center;
     }
     .main .tbl table td{
-        max-width: 100px;
+        max-width: 50px;
         overflow: hidden;
         text-overflow: ellipsis;
     }
