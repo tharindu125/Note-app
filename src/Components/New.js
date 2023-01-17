@@ -40,7 +40,7 @@ export default function New() {
             btn2.appendChild(document.createElement('delete'));
             btn2.innerHTML = "Delete"
             btn2.onClick = ()=>{
-                document.removeParent(document.getElementById(id))
+                document.getElementById('tbl_body').parentElement.remove();
             }
 
             td3.appendChild(btn2);
@@ -50,7 +50,7 @@ export default function New() {
             tr.appendChild(td2);
             tr.appendChild(td3);
 
-            document.getElementById('tbl_body').appendChild(tr)
+           document.getElementById('tbl_body').appendChild(tr)
             id += 1;
 
             
@@ -62,10 +62,11 @@ export default function New() {
         console.log('123456')
         
         console.log(e.target.id);
-           
-        var tr = e.target
-        document.getElementById('tbl').removeChild(tr);
-            
+
+        let data= document.getElementById('tbl_body');
+
+        data.parentElement.remove();
+      
     }
     // useEffect(() => {
     
