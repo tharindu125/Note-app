@@ -10,7 +10,6 @@ export default function New() {
     
     let id = 0;
 
-
     /*------Add Note----*/
     const myFn = (event) => {
         event.preventDefault()
@@ -44,7 +43,6 @@ export default function New() {
             btn2.innerHTML = "Delete"
             items.addEventListener('click', removeNote);
 
-            
             //add all tds to tr
             tr.appendChild(td1);
             tr.appendChild(td2);
@@ -52,8 +50,7 @@ export default function New() {
 
            document.getElementById('tbl_body').appendChild(tr)
             id += 1;
-
-            
+      
         }
     }
 
@@ -65,72 +62,18 @@ export default function New() {
         data.replaceChildren();
      
     }
-    
+
     /*------delete button--------*/
     function removeNote(e) {
         e.preventDefault();
-        console.log('ffffffffff')
-        let data= document.getElementById('tbl-body');
-        data.replaceChildren();
+
+        if(e.target.id === 'del'){
+            if (window.confirm('Are you sure?')) {
+                var tr = e.target.parentElement.parentElement;
+                items.removeChild(tr);
+              }       
+        }
     }
-
-    // useEffect(() => {
-    
-    //     console.log("#1");
-    //     // e.preventDefault();
-        
-    //     if(title === '' && body === ''){
-    //         alert("Please fill all fields!!!")
-    //         console.log("2");
-    //     }else{
-
-    //         //create a new note  record
-    //         console.log("3");
-    //         //New tr
-    //         var tr = document.createElement('tr');
-    //         tr.className = 'item';
-            
-    //         //new td for title and body
-    //         var td1 = document.createElement('td');
-    //         td1.appendChild(document.createTextNode(title));
-    //         var span = document.createElement('span');
-    //         span.className = 'note-body';
-    //         span.appendChild(document.createTextNode(body));
-    //         td1.appendChild(span);
-
-    //         //new td for view
-    //         var td2 = document.createElement('td')
-    //         td2.className = 'view';
-    //         var btn1 = document.createElement('button');
-    //         btn1.appendChild(document.createElement('view'));
-    //         btn1.setAttribute('id', 'vw');
-    //         td2.appendChild(btn1);
-            
-    //         //new td for delete
-    //         var td3 = document.createElement('td')
-    //         td2.className = 'delete';
-    //         var btn2 = document.createElement('button');
-    //         btn2.appendChild(document.createElement('delete'));
-    //         btn2.setAttribute('id', 'del');
-    //         td3.appendChild(btn2);
-
-    //         //add all tds to tr
-    //         tr.appendChild(td1);
-    //         tr.appendChild(td2);
-    //         tr.appendChild(td3);
-
-    //         //increment note count
-    //         noteCount++;
-
-    //         //set new note
-    //         newNote = tr;
-
-    //         //add or update the note of the table
-    //         updateTable();
-    
-    //     }
-    // }, []);
-
 
   return (
     <>
