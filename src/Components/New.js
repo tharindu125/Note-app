@@ -6,6 +6,7 @@ export default function New() {
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
    
+    var items = document.getElementById('tbl_body');
     
     let id = 0;
 
@@ -38,12 +39,11 @@ export default function New() {
             td3.className = 'delete';
             var btn2 = document.createElement('button');
             btn2.appendChild(document.createElement('delete'));
-            btn2.innerHTML = "Delete"
-            btn2.onClick = ()=>{
-                document.getElementById('tbl_body').parentElement.remove();
-            }
-
+            btn2.setAttribute('id', 'del');
             td3.appendChild(btn2);
+            btn2.innerHTML = "Delete"
+            items.addEventListener('click', removeNote);
+
             
             //add all tds to tr
             tr.appendChild(td1);
@@ -57,17 +57,23 @@ export default function New() {
         }
     }
 
+    /*--------Reset----------*/
     const myRe = (e) => {
         e.preventDefault();
-        console.log('123456')
-        
-        console.log(e.target.id);
 
         let data= document.getElementById('tbl_body');
-
-        data.parentElement.remove();
-      
+        data.replaceChildren();
+     
     }
+    
+    /*------delete button--------*/
+    function removeNote(e) {
+        e.preventDefault();
+        console.log('ffffffffff')
+        let data= document.getElementById('tbl-body');
+        data.replaceChildren();
+    }
+
     // useEffect(() => {
     
     //     console.log("#1");
