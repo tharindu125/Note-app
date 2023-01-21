@@ -3,10 +3,13 @@ import '../Style/Form.css'
 
 export default function New() {
     
+    /*----Variables----*/
     const [title, setTitle] = useState('');
     const [body, setBody] = useState('');
+    // const [search, searchText] = useState('');
    
     var items = document.getElementById('tbl_body');
+    var search = document.getElementById('srch')
     
     let id = 0;
 
@@ -74,6 +77,12 @@ export default function New() {
               }       
         }
     }
+    
+    /*-------Search-------*/
+    const searchNotes = (e) => {
+        console.log(search);
+    }
+
 
   return (
     <>
@@ -82,7 +91,7 @@ export default function New() {
             <h2>Note App</h2>
             <div className='search'>
                 <label>Search : </label>
-                <input type="text" id='srch' placeholder='Search your note...'/>
+                <input type="text" id='srch' placeholder='Search your note...' onInput={searchNotes} />
             </div>
         </header>
         <div className='main' id='bdy'>
